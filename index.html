@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>Brushify</h1>
+        <div id="Editor" contenteditable="true"></div>
+        <br>
+       
+        <button id="Download">Download</button>
+        <br>
+        <div id="parent">
+            <div id="BackgroundColor">
+                <h2>Choose Background Color</h2>
+                
+                <button id="bgc"  onclick="backgroundColor('greenyellow')" style="background-color: greenyellow;"></button>
+                <button id="bgc" onclick="backgroundColor('red')" style="background-color: red;"></button>
+                <button id="bgc" onclick="backgroundColor('blue')" style="background-color: blue;"></button>
+                <button id="bgc" onclick="backgroundColor('cyan')" style="background-color: cyan;"></button>
+                <button id="bgc" onclick="backgroundColor('orange')" style="background-color: orange;"></button>
+            </div>
+            <div id="TextColor">
+                <h2>Choose Text Color</h2>
+            <button id="bgc"  onclick="color('red')" style="background-color: red;"></button>
+            <button id="bgc"  onclick="color('green')" style="background-color: green;"></button>
+            <button id="bgc"  onclick="color('blue')" style="background-color: blue;"></button>
+            <button id="bgc" onclick="color('hotpink')" style="background-color: greenyellow;"></button>
+            <button id="bgc" onclick="color('skyblue')" style="background-color: purple;"></button>
+            </div>
+            <br><br><br><br>
+            <div id ="FontStyle">
+            <h2>Choose Font Style</h2>
+            <br>
+            <button class="font" onclick="fontFamily('cursive')">Hello World!</button>
+            <button class="font" onclick="fontFamily('sans-serif')">Hello World!</button>
+            <button class="font" onclick="fontFamily('georgia')">Hello World!</button>
+            <button class="font" onclick="fontFamily('Edwardian Script ITC, Great Vibes, cursive')">Hello World!</button>
+            <button class="font" onclick="fontFamily(`'Special Elite', monospace`)">Hello World!</button>
+            </div>
+        </div>
+    </center>
+    <script>
+        function backgroundColor(clr){
+            document.getElementById('Editor').style.backgroundColor = clr
+        }
+        function color(clr){
+            document.getElementById('Editor').style.color = clr
+        }
+        function fontFamily(fnt){
+            document.getElementById('Editor').style.fontFamily= fnt
+        }
+    </script>  
+</body>
+</html>
